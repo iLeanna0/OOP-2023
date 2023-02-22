@@ -26,10 +26,6 @@ public class Main
 		String[] a = {"MAIN"};
         processing.core.PApplet.runSketch( a, new StarMap());
     }
-<<<<<<< HEAD
-=======
-
->>>>>>> ea17a3ea1a4624740569d0949200140e12e2341f
 	public static void audio1()
 	{
 		String[] a = {"MAIN"};
