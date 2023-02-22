@@ -1,6 +1,21 @@
 package ie.tudublin;
 
+import java.util.HashSet;
+import java.util.Set;
+
+import processing.core.PApplet;
+import processing.data.Table;
+import processing.data.TableRow;
+
 public class Star {
+    boolean hab;
+    String displayName;
+    float distance;
+    float xG;
+    float yG;
+    float zG;
+    float absMag;
+
     public Star(TableRow tr)
  	{
  		this(
