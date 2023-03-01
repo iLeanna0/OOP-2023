@@ -39,13 +39,13 @@ public class Main
 	
 	public static void main(String[] args)
 	{
-		System.out.println("Hello world");
+		PitchSpeller ps = new PitchSpeller();
+		System.out.println(ps.spell(330));
+		System.out.println(ps.spell(420));
+		System.out.println(ps.spell(1980));
 		
-		Dog penny = new Dog();
-		penny.setName("Penny");
-		penny.speak();
 
-		audio2();
+		//audio2();
 	}
 	
 }
