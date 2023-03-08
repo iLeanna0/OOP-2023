@@ -30,9 +30,9 @@ public class LifeBoard {
         {
             for (int j = -1 ; j <= 1 ; j ++)
             {
-                if (! (i == 0) && (j == 0))
+                if (! ((i == 0) && (j == 0)))
                 {
-                    if (getCell(i, j))
+                    if (getCell(row + i, col +  j))
                     {
                         count ++;
                     }
@@ -104,11 +104,33 @@ public class LifeBoard {
         }
     }
 
+    public void clear()
+    {
+        for(int row = 0 ; row < size ; row ++)
+        {
+            for (int col = 0 ; col < size ; col ++)
+            {
+                board[row][col] = false;
+            }
+        }
+    }
+    public void jesus()
+    {
+        for(int row = 0 ; row < size ; row ++)
+        {
+            board[row][size/2] = true;  
+        }
+        for (int col = 0 ; col < size ; col ++)
+        {
+            board[size/2][col] = true;   
+        }
+    }
+
     public void render()
     {
         for(int row = 0 ; row < size ; row ++)
         {
-            p.stroke(255);
+            //p.stroke(255);
             for (int col = 0 ; col < size ; col ++)
             {
                 float x = col * cellWidth;
@@ -116,13 +138,14 @@ public class LifeBoard {
 
                 if (board[row][col])
                 {
-                    p.fill(0, 255, 0);
+                    p.fill(p.random(0,256), p.random(0,256), p.random(0,256));
                 }
                 else
                 {
                     p.noFill();
                 }
-                p.rect(x, y, cellWidth, cellWidth);
+                p.triangle(x, y + cellWidth, x + cellWidth/2, y, x + cellWidth, y + cellWidth);
+                
             }
         }
     }
