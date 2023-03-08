@@ -16,7 +16,7 @@ public class Life extends PApplet
 	public void setup() {
 		colorMode(RGB);
 		background(0);
-		board = new LifeBoard(50, this);
+		board = new LifeBoard(50,this);
 		board.randomise();
 		frameRate(10);
 	}
