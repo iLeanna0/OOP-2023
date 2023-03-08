@@ -20,7 +20,7 @@ public class Life extends PApplet
 
 	public void draw()
 	{	
-		background(0);
+		background( 0);
 		board.render();
 		board.applyRules();
 		
