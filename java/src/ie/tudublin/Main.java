@@ -54,6 +54,12 @@ public class Main
 		String[] a = {"MAIN"};
         processing.core.PApplet.runSketch( a, new YASC());
     }
+
+	public static void assignment()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new Assignment());
+    }
 	
 	public static void main(String[] args)
 	{
@@ -63,7 +69,7 @@ public class Main
 		penny.setName("Penny");
 		penny.speak();
 
-		yasc();
+		assignment();
 	}
 	
 }
